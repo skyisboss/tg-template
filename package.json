@@ -1,0 +1,35 @@
+{
+  "name": "pkwallet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e ts -x ts-node src/app.ts",
+    "start": "NODE_ENV=production WEBHOOK_URL=${NOW_URL} node dist/app.js",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --config .prettierrc src/**/*.ts --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "grammy": "^1.8.3",
+    "sqlite3": "^5.0.8",
+    "tslint": "^6.1.3",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.38",
+    "@types/sqlite3": "^3.1.8",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}
